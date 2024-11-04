@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "build": "deno run -R -W -E build.ts",
+    "dev": "deno run -R -W -E --watch=src/environment.css build.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/fs": "jsr:@std/fs@^1.0.4"
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 4,
+    "semiColons": true,
+    "singleQuote": false,
+    "proseWrap": "preserve"
+  }
+}
