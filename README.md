@@ -24,7 +24,7 @@ Located in the `examples` directory.
 
 Doesn't exist yet.
 
-# Production
+## Production
 
 To help make your app faster, Oxiris CSS is already minified with [CSSnano](https://cssnano.github.io/cssnano/); however, it can be further optimized for individual projects.
 
