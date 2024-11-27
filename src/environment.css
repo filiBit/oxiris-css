@@ -35,25 +35,9 @@ body {
   --ox-bg-selection: var(--ox-quaternary);
   --ox-bg: var(--ox-background);
 
-  --ox-space-0: 0;
-  --ox-space-1: 8px;
-  --ox-space-2: calc(var(--ox-space-1) * 2);
-  --ox-space-3: calc(var(--ox-space-1) * 3);
-  --ox-space-4: calc(var(--ox-space-1) * 4);
-  --ox-space-5: calc(var(--ox-space-1) * 5);
-  --ox-space-6: calc(var(--ox-space-1) * 6);
-  --ox-space-7: calc(var(--ox-space-1) * 7);
-  --ox-space-8: calc(var(--ox-space-1) * 8);
-  --ox-space-9: calc(var(--ox-space-1) * 9);
-  --ox-space-10: calc(var(--ox-space-1) * 10);
-  --ox-space-11: calc(var(--ox-space-1) * 11);
-  --ox-space-12: calc(var(--ox-space-1) * 12);
-  --ox-space-13: calc(var(--ox-space-1) * 13);
-  --ox-space-14: calc(var(--ox-space-1) * 14);
-  --ox-space-15: calc(var(--ox-space-1) * 15);
-  --ox-space-16: calc(var(--ox-space-1) * 16);
+  --ox-base-length: 8px;
 
-  --ox-cell-width: var(--ox-space-6);
+  --ox-cell-width: calc(6 * var(--ox-base-length));
   --ox-cell-gap: calc(var(--ox-cell-width) / 2);
 
   --ox-round-factor: 1;

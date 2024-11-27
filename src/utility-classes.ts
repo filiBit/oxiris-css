@@ -6,7 +6,7 @@ const hRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `h-${idx}`,
-    idx === 0 ? ["height: 0"] : [`height: var(--ox-space-${idx})`],
+    [`height: calc(${idx} * var(--ox-base-length))`],
 ]);
 
 hRules.push(["h-100\\%", ["height: 100%"]]);
@@ -16,7 +16,7 @@ const maxHRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `max-h-${idx}`,
-    idx === 0 ? ["max-height: 0"] : [`max-height: var(--ox-space-${idx})`],
+    [`max-height: calc(${idx} * var(--ox-base-length))`],
 ]);
 
 maxHRules.push(["max-h-100\\%", ["max-height: 100%"]], ["max-h-100vh", [
@@ -28,7 +28,7 @@ const minHRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `min-h-${idx}`,
-    idx === 0 ? ["min-height: 0"] : [`min-height: var(--ox-space-${idx})`],
+    [`min-height: calc(${idx} * var(--ox-base-length))`],
 ]);
 
 minHRules.push(["min-h-100vh", [
@@ -44,7 +44,7 @@ const wRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `w-${idx}`,
-    idx === 0 ? ["width: 0"] : [`width: var(--ox-space-${idx})`],
+    [`width: calc(${idx} * var(--ox-base-length))`],
 ]);
 
 wRules.push(["w-100\\%", ["width: 100%"]]);
@@ -54,7 +54,7 @@ const maxWRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `max-w-${idx}`,
-    idx === 0 ? ["max-width: 0"] : [`max-width: var(--ox-space-${idx})`],
+    [`max-width: calc(${idx} * var(--ox-base-length))`],
 ]);
 
 maxWRules.push(["max-w-100\\%", ["max-width: 100%"]]);
@@ -62,13 +62,13 @@ maxWRules.push(["max-w-100\\%", ["max-width: 100%"]]);
 const gapRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
     idx,
-) => [`gap-${idx}`, idx === 0 ? ["gap: 0"] : [`gap: var(--ox-space-${idx})`]]);
+) => [`gap-${idx}`, [`gap: calc(${idx} * var(--ox-base-length))`]]);
 
 const roundRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
     idx,
 ) => [`round-${idx}`, [
-    `border-radius: calc(var(--ox-round-factor) * var(--ox-space-${idx}))`,
+    `border-radius: calc(var(--ox-round-factor) * ${idx} * var(--ox-base-length))`,
 ]]);
 
 const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
@@ -116,38 +116,38 @@ const mRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
     idx,
 ) => [[
     `m-${idx}`,
-    idx === 0 ? ["margin: 0"] : [`margin: var(--ox-space-${idx})`],
+    [`margin: calc(${idx} * var(--ox-base-length))`],
 ], [
     `mx-${idx}`,
-    idx === 0 ? ["margin-left: 0", "margin-right: 0"] : [
-        `margin-left: var(--ox-space-${idx})`,
-        `margin-right: var(--ox-space-${idx})`,
+    [
+        `margin-left: calc(${idx} * var(--ox-base-length))`,
+        `margin-right: calc(${idx} * var(--ox-base-length))`,
     ],
 ], [
     `my-${idx}`,
-    idx === 0 ? ["margin-top: 0", "margin-bottom: 0"] : [
-        `margin-top: var(--ox-space-${idx})`,
-        `margin-bottom: var(--ox-space-${idx})`,
+    [
+        `margin-top: calc(${idx} * var(--ox-base-length))`,
+        `margin-bottom: calc(${idx} * var(--ox-base-length))`,
     ],
 ], [
     `mt-${idx}`,
-    idx === 0 ? ["margin-top: 0"] : [
-        `margin-top: var(--ox-space-${idx})`,
+    [
+        `margin-top: calc(${idx} * var(--ox-base-length))`,
     ],
 ], [
     `mr-${idx}`,
-    idx === 0 ? ["margin-right: 0"] : [
-        `margin-right: var(--ox-space-${idx})`,
+    [
+        `margin-right: calc(${idx} * var(--ox-base-length))`,
     ],
 ], [
     `mb-${idx}`,
-    idx === 0 ? ["margin-bottom: 0"] : [
-        `margin-bottom: var(--ox-space-${idx})`,
+    [
+        `margin-bottom: calc(${idx} * var(--ox-base-length))`,
     ],
 ], [
     `ml-${idx}`,
-    idx === 0 ? ["margin-left: 0"] : [
-        `margin-left: var(--ox-space-${idx})`,
+    [
+        `margin-left: calc(${idx} * var(--ox-base-length))`,
     ],
 ]]);
 
@@ -165,44 +165,44 @@ const pRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
 ) => [
     [
         `p-${idx}`,
-        idx === 0 ? ["padding: 0"] : [`padding: var(--ox-space-${idx})`],
+        [`padding: calc(${idx} * var(--ox-base-length))`],
     ],
     [
         `px-${idx}`,
-        idx === 0 ? ["padding-left: 0", "padding-right: 0"] : [
-            `padding-left: var(--ox-space-${idx})`,
-            `padding-right: var(--ox-space-${idx})`,
+        [
+            `padding-left: calc(${idx} * var(--ox-base-length))`,
+            `padding-right: calc(${idx} * var(--ox-base-length))`,
         ],
     ],
     [
         `py-${idx}`,
-        idx === 0 ? ["padding-top: 0", "padding-bottom: 0"] : [
-            `padding-top: var(--ox-space-${idx})`,
-            `padding-bottom: var(--ox-space-${idx})`,
+        [
+            `padding-top: calc(${idx} * var(--ox-base-length))`,
+            `padding-bottom: calc(${idx} * var(--ox-base-length))`,
         ],
     ],
     [
         `pt-${idx}`,
-        idx === 0 ? ["padding-top: 0"] : [
-            `padding-top: var(--ox-space-${idx})`,
+        [
+            `padding-top: calc(${idx} * var(--ox-base-length))`,
         ],
     ],
     [
         `pr-${idx}`,
-        idx === 0 ? ["padding-right: 0"] : [
-            `padding-right: var(--ox-space-${idx})`,
+        [
+            `padding-right: calc(${idx} * var(--ox-base-length))`,
         ],
     ],
     [
         `pb-${idx}`,
-        idx === 0 ? ["padding-bottom: 0"] : [
-            `padding-bottom: var(--ox-space-${idx})`,
+        [
+            `padding-bottom: calc(${idx} * var(--ox-base-length))`,
         ],
     ],
     [
         `pl-${idx}`,
-        idx === 0 ? ["padding-left: 0"] : [
-            `padding-left: var(--ox-space-${idx})`,
+        [
+            `padding-left: calc(${idx} * var(--ox-base-length))`,
         ],
     ],
 ]);
@@ -223,7 +223,7 @@ const lhRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
     idx,
 ) => [[
     `lh-${idx}`,
-    idx === 0 ? ["line-height: 0"] : [`line-height: var(--ox-space-${idx})`],
+    [`line-height: calc(${idx} * var(--ox-base-length))`],
 ]]);
 
 lhRules.push([

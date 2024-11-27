@@ -10,9 +10,9 @@ const cssRules: CssRuleDefinitionSet = [
             "align-items: center",
             "justify-content: center",
             "border: 1px solid var(--ox-accent)",
-            "border-radius: calc(var(--ox-round-factor) * var(--ox-space-1))",
-            "padding: 0 var(--ox-space-2)",
-            "height: var(--ox-space-8)",
+            "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
+            "padding: 0 calc(2 * var(--ox-base-length))",
+            "height: calc(8 * var(--ox-base-length))",
             "text-decoration: none",
             "font-size: inherit",
             "line-height: 1.5",
@@ -33,7 +33,7 @@ const cssRules: CssRuleDefinitionSet = [
         "background: var(--ox-accent)",
     ]],
     ["button.toggle", [
-        "padding-right: var(--ox-space-3)",
+        "padding-right: calc(3 * var(--ox-base-length))",
     ]],
     [
         "table",
@@ -46,7 +46,7 @@ const cssRules: CssRuleDefinitionSet = [
     [
         "table > *",
         [
-            "min-height: var(--ox-space-6)",
+            "min-height: calc(6 * var(--ox-base-length))",
             "border-bottom: 1px solid var(--ox-accent)",
             "display: flex",
             "align-items: stretch",
@@ -59,7 +59,7 @@ const cssRules: CssRuleDefinitionSet = [
     [
         "table > * > *",
         [
-            "padding: var(--ox-space-1)",
+            "padding: var(--ox-base-length)",
             "display:flex",
             "flex-basis: 1px",
             "flex-grow: 1",
@@ -129,13 +129,13 @@ const cssPseudoRules: CssRuleDefinitionSet = [
     ["button.toggle::after", [
         'content: ""',
         "position: absolute",
-        "top: var(--ox-space-1)",
-        "right: var(--ox-space-1)",
+        "top: var(--ox-base-length)",
+        "right: var(--ox-base-length)",
         "border: 1px solid var(--ox-accent)",
-        "width: var(--ox-space-1)",
-        "height: var(--ox-space-1)",
+        "width: var(--ox-base-length)",
+        "height: var(--ox-base-length)",
         "background: none",
-        "border-radius: calc(var(--ox-round-factor) * var(--ox-space-1))",
+        "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
     ]],
     ["button.toggle.active::after", [
         "background: var(--ox-accent)",
