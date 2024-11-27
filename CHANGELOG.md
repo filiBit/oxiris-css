@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Rename CSS custom properties from `--ox-space-<x>` to single `--ox-base-length`
+- Replace `em` values with unitless for `.lh-<n>` rules ([see the reason](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values))
 
 ## [1.0.0] 2024-11-05
 
