@@ -227,11 +227,14 @@ const lhRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
 ]]);
 
 lhRules.push([
-    "lh-1\\.5em",
-    ["line-height: 1.5em"],
+    "lh-1\\.3",
+    ["line-height: 1.3"],
 ], [
-    "lh-2em",
-    ["line-height: 2em"],
+    "lh-1\\.5",
+    ["line-height: 1.5"],
+], [
+    "lh-2",
+    ["line-height: 2"],
 ]);
 
 const borderRules: CssRuleDefinitionSet = [
