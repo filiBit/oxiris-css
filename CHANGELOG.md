@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - CSS specificity of `.border-<...>` rules
+- CSS specificity in dist file: "utility+component"
 
 ## [1.0.0] 2024-11-05
 
