@@ -110,10 +110,6 @@ const cssRules: CssRuleDefinitionSet = [
         "font-size: var(--ox-f-size-sm)",
         "font-weight: var(--ox-f-weight-sm)",
     ]],
-    ["tab-bar", [
-        "color: var(--ox-bg)",
-        "background: var(--ox-accent)",
-    ]],
 ];
 
 const cssPseudoRules: CssRuleDefinitionSet = [

@@ -7,10 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `.fg=$bg` utility rule with declaration: `color: var(--ox-bg)`
+- `.bg=$fg` utility rule with declaration: `background: var(--ox-accent-)`
+
 ### Changed
 
 - Rename CSS custom properties from `--ox-space-<x>` to single `--ox-base-length`
 - Replace `em` values with unitless for `.lh-<n>` rules ([see the reason](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values))
+
+### Removed
+
+- `.tab-bar` component rule
 
 ## [1.0.0] 2024-11-05
 
