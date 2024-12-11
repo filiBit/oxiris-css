@@ -306,6 +306,12 @@ const boxSizeRules: CssRuleDefinitionSet = [
 ];
 
 const colorRules: CssRuleDefinitionSet = [
+    ["neutral", [
+        "color: var(--ox-neutral)",
+        "--ox-accent: var(--ox-neutral)",
+        "--ox-blur: var(--ox-neutral-blur)",
+        "--ox-accent-bg: var(--ox-neutral-bg, var(--ox-bg))",
+    ]],
     ["primary", [
         "color: var(--ox-primary)",
         "--ox-accent: var(--ox-primary)",

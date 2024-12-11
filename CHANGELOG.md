@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `.fg=$bg` utility rule with declaration: `color: var(--ox-bg)`
 - `.bg=$fg` utility rule with declaration: `background: var(--ox-accent-)`
+- Neutral color palette
 
 ### Changed
 
