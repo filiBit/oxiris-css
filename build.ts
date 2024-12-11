@@ -61,7 +61,7 @@ Deno.writeFile(
     `./dist/oxiris-css-${VERSION}-utility+component.css`,
     new TextEncoder().encode(
         `/* ${AUTHOR_NOTE} */\n` +
-            await postcssProcessor.process(utilityClasses + componentClasses, {
+            await postcssProcessor.process(componentClasses + utilityClasses, {
                 from: undefined,
             })
                 .then((
