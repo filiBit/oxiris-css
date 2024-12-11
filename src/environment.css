@@ -15,6 +15,9 @@ body {
   --ox-f-weight-xl: 600;
   --ox-f-weight-2xl: 700;
 
+  --ox-neutral: hsl(0, 0%, 72%);
+  --ox-neutral-blur: hsl(0, 0%, 6%);
+  --ox-neutral-bg: unset;
   --ox-primary: hsl(240, 57%, 81%);
   --ox-primary-blur: hsl(240, 19%, 11%);
   --ox-primary-bg: unset;
@@ -29,9 +32,9 @@ body {
   --ox-quaternary-bg: unset;
   --ox-background: hsl(150, 100%, 0%);
 
-  --ox-accent: var(--ox-primary);
-  --ox-blur: var(--ox-primary-blur);
-  --ox-accent-bg: var(--ox-primary-bg, var(--ox-bg));
+  --ox-accent: var(--ox-neutral);
+  --ox-blur: var(--ox-neutral-blur);
+  --ox-accent-bg: var(--ox-neutral-bg, var(--ox-bg));
   --ox-bg-selection: var(--ox-quaternary);
   --ox-bg: var(--ox-background);
 
@@ -43,7 +46,7 @@ body {
   --ox-round-factor: 1;
 
   font-size: 1.8rem;
-  color: var(--ox-accent);
+  color: var(--ox-neutral);
   background: var(--ox-bg);
 }
 
