@@ -239,6 +239,26 @@ lhRules.push([
 
 const borderRules: CssRuleDefinitionSet = [
     [
+        "border-0",
+        ["border: none"],
+    ],
+    [
+        "border-top-0",
+        ["border-top: none"],
+    ],
+    [
+        "border-right-0",
+        ["border-right: none"],
+    ],
+    [
+        "border-bottom-0",
+        ["border-bottom: none"],
+    ],
+    [
+        "border-left-0",
+        ["border-left: none"],
+    ],
+    [
         "border-1px",
         ["border: 1px solid var(--ox-accent)"],
     ],
@@ -277,26 +297,6 @@ const borderRules: CssRuleDefinitionSet = [
     [
         "border-left-2px",
         ["border-left: 2px solid var(--ox-accent)"],
-    ],
-    [
-        "border-0",
-        ["border: none"],
-    ],
-    [
-        "border-top-0",
-        ["border-top: none"],
-    ],
-    [
-        "border-right-0",
-        ["border-right: none"],
-    ],
-    [
-        "border-bottom-0",
-        ["border-bottom: none"],
-    ],
-    [
-        "border-left-0",
-        ["border-left: none"],
     ],
 ];
 

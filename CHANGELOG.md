@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `.tab-bar` component rule
 
+### Fixed
+
+- CSS specificity of `.border-<...>` rules
+
 ## [1.0.0] 2024-11-05
 
 ### Added
