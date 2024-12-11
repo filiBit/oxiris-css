@@ -333,6 +333,8 @@ const colorRules: CssRuleDefinitionSet = [
     ["solid", [
         "background: var(--ox-accent-bg)",
     ]],
+    ["fg\\=\\$bg", ["color: var(--ox-bg)"]],
+    ["bg\\=\\$fg", ["background: var(--ox-accent)"]],
 ];
 
 const letterRules: CssRuleDefinitionSet = [
