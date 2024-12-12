@@ -12,7 +12,7 @@ const cssRules: CssRuleDefinitionSet = [
             "border: 1px solid var(--ox-accent)",
             "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
             "padding: 0 calc(2 * var(--ox-base-length))",
-            "height: calc(8 * var(--ox-base-length))",
+            "height: calc(6 * var(--ox-base-length))",
             "text-decoration: none",
             "font-size: inherit",
             "line-height: 1.5",

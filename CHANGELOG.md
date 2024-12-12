@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Rename CSS custom properties from `--ox-space-<x>` to single `--ox-base-length`
 - Replace `em` values with unitless for `.lh-<n>` rules ([see the reason](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values))
+- Set height of class component `.button` to 6 base-length
 
 ### Removed
 
