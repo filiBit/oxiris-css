@@ -75,7 +75,7 @@ const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     _,
     idx,
 ) => [
-    `x-span-${idx + 1}`,
+    `w-span-${idx + 1}`,
     [`width: calc(${
         idx + 1
     } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
@@ -85,27 +85,27 @@ const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     _,
     idx,
 ) => [
-    `max-x-span-${idx + 1}`,
+    `max-w-span-${idx + 1}`,
     [`max-width: calc(${
         idx + 1
     } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
 ]);
 
-const ySpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
+const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     _,
     idx,
 ) => [
-    `y-span-${idx + 1}`,
+    `h-span-${idx + 1}`,
     [`height: calc(${
         idx + 1
     } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
 ]);
 
-const maxYSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
+const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     _,
     idx,
 ) => [
-    `max-y-span-${idx + 1}`,
+    `max-h-span-${idx + 1}`,
     [`max-height: calc(${
         idx + 1
     } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
@@ -364,8 +364,8 @@ const cssRules: CssRuleDefinitionSet = [
     ...roundRules,
     ...wSpanRules,
     ...maxWSpanRules,
-    ...ySpanRules,
-    ...maxYSpanRules,
+    ...hSpanRules,
+    ...maxHSpanRules,
     ...mRules,
     ...pRules,
     ...textRules,
