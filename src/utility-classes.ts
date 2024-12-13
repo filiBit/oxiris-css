@@ -78,7 +78,7 @@ const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     `w-span-${idx + 1}`,
     [`width: calc(${
         idx + 1
-    } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
+    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
 ]);
 
 const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
@@ -88,7 +88,7 @@ const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     `max-w-span-${idx + 1}`,
     [`max-width: calc(${
         idx + 1
-    } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
+    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
 ]);
 
 const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
@@ -98,7 +98,7 @@ const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     `h-span-${idx + 1}`,
     [`height: calc(${
         idx + 1
-    } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
+    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
 ]);
 
 const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
@@ -108,7 +108,7 @@ const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
     `max-h-span-${idx + 1}`,
     [`max-height: calc(${
         idx + 1
-    } * var(--ox-cell-width) + ${idx} * var(--ox-cell-gap))`],
+    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
 ]);
 
 const mRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((

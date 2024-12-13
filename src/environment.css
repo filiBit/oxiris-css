@@ -3,6 +3,15 @@ html {
 }
 
 body {
+  --ox-base-length: 8px;
+
+  --ox-grid-track-width: calc(6 * var(--ox-base-length));
+  --ox-grid-line-width: calc(var(--ox-grid-track-width) / 2);
+
+  --ox-round-factor: 1;
+
+  font-size: 1.8rem;
+
   --ox-f-size-sm: 1.6rem;
   --ox-f-size-md: 1.8rem;
   --ox-f-size-lg: 2.2rem;
@@ -14,45 +23,67 @@ body {
   --ox-f-weight-lg: 500;
   --ox-f-weight-xl: 600;
   --ox-f-weight-2xl: 700;
+}
 
-  --ox-neutral: hsl(0, 0%, 72%);
-  --ox-neutral-blur: hsl(0, 0%, 6%);
-  --ox-neutral-bg: unset;
-  --ox-primary: hsl(240, 57%, 81%);
-  --ox-primary-blur: hsl(240, 19%, 11%);
-  --ox-primary-bg: unset;
-  --ox-secondary: hsl(60, 43%, 54%);
-  --ox-secondary-blur: hsl(60, 26%, 7%);
-  --ox-secondary-bg: unset;
-  --ox-tertiary: hsl(330, 52%, 77%);
-  --ox-tertiary-blur: hsl(330, 17%, 10%);
-  --ox-tertiary-bg: unset;
-  --ox-quaternary: hsl(150, 46%, 61%);
-  --ox-quaternary-blur: hsl(150, 28%, 8%);
-  --ox-quaternary-bg: unset;
-  --ox-background: hsl(150, 100%, 0%);
+/* Dark color scheme */
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: dark;
+    --ox-neutral: hsl(0, 0%, 72%);
+    --ox-neutral-blur: hsl(0, 0%, 6%);
+    --ox-neutral-bg: unset;
+    --ox-primary: hsl(240, 57%, 81%);
+    --ox-primary-blur: hsl(240, 19%, 11%);
+    --ox-primary-bg: unset;
+    --ox-secondary: hsl(60, 43%, 54%);
+    --ox-secondary-blur: hsl(60, 26%, 7%);
+    --ox-secondary-bg: unset;
+    --ox-tertiary: hsl(330, 52%, 77%);
+    --ox-tertiary-blur: hsl(330, 17%, 10%);
+    --ox-tertiary-bg: unset;
+    --ox-quaternary: hsl(150, 46%, 61%);
+    --ox-quaternary-blur: hsl(150, 28%, 8%);
+    --ox-quaternary-bg: unset;
+    --ox-background: hsl(150, 100%, 0%);
+  }
+}
 
+/* Light color scheme */
+@media (prefers-color-scheme: light) {
+  body {
+    color-scheme: light;
+    --ox-neutral: hsl(0, 0%, 15%);
+    --ox-neutral-blur: hsl(0, 0%, 85%);
+    --ox-neutral-bg: hsl(0, 0%, 90%);
+    --ox-primary: hsl(240, 100%, 15%);
+    --ox-primary-blur: hsl(240, 20%, 85%);
+    --ox-primary-bg: hsl(240, 20%, 90%);
+    --ox-secondary: hsl(60, 100%, 15%);
+    --ox-secondary-blur: hsl(60, 30%, 80%);
+    --ox-secondary-bg: hsl(60, 90%, 92%);
+    --ox-tertiary: hsl(330, 100%, 15%);
+    --ox-tertiary-blur: hsl(330, 20%, 85%);
+    --ox-tertiary-bg: hsl(330, 20%, 90%);
+    --ox-quaternary: hsl(150, 100%, 15%);
+    --ox-quaternary-blur: hsl(150, 25%, 80%);
+    --ox-quaternary-bg: hsl(150, 50%, 92%);
+    --ox-background: hsl(150, 100%, 100%);
+  }
+}
+
+/* Activate neutral color palette */
+body {
   --ox-accent: var(--ox-neutral);
   --ox-blur: var(--ox-neutral-blur);
   --ox-accent-bg: var(--ox-neutral-bg, var(--ox-bg));
-  --ox-bg-selection: var(--ox-quaternary);
   --ox-bg: var(--ox-background);
-
-  --ox-base-length: 8px;
-
-  --ox-cell-width: calc(6 * var(--ox-base-length));
-  --ox-cell-gap: calc(var(--ox-cell-width) / 2);
-
-  --ox-round-factor: 1;
-
-  font-size: 1.8rem;
-  color: var(--ox-neutral);
+  color: var(--ox-accent);
   background: var(--ox-bg);
 }
 
 ::selection {
   color: var(--ox-bg);
-  background: var(--ox-bg-selection);
+  background: var(--ox-quaternary);
 }
 
 * {

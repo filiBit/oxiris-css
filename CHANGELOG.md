@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.fg=$bg` utility rule with declaration: `color: var(--ox-bg)`
 - `.bg=$fg` utility rule with declaration: `background: var(--ox-accent-)`
 - Neutral color palette
+- Dark and light color schemes
 
 ### Changed
 
@@ -19,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replace `em` values with unitless for `.lh-<n>` rules ([see the reason](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values))
 - Set height of class component `.button` to 6 base-length
 - Rename `.x-span`, `.max-x-span`, `.y-span` and `.max-y-span` into `.w-span`, `.max-w-span`, `.h-span` and `.max-h-span`
+- Rename `--ox-cell-width` to `--ox-grid-track-width`
+- Rename `--ox-cell-gap` to `--ox-cell-line-width`
 
 ### Removed
 
