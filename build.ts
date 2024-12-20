@@ -31,30 +31,12 @@ console.log("Prepare dist dir");
 await fs.emptyDir("./dist");
 
 console.log("Create dist files");
+
 Deno.writeFile(
     `./dist/oxiris-css-${VERSION}-env.css`,
     new TextEncoder().encode(
         `/* ${AUTHOR_NOTE} */\n` +
-            await postcssProcessor.process(envCss, { from: undefined }).then((
-                res,
-            ) => res.css),
-    ),
-);
-Deno.writeFile(
-    `./dist/oxiris-css-${VERSION}-utility.css`,
-    new TextEncoder().encode(
-        `/* ${AUTHOR_NOTE} */\n` +
-            await postcssProcessor.process(utilityClasses, { from: undefined })
-                .then((res) => res.css),
-    ),
-);
-Deno.writeFile(
-    `./dist/oxiris-css-${VERSION}-component.css`,
-    new TextEncoder().encode(
-        `/* ${AUTHOR_NOTE} */\n` +
-            await postcssProcessor.process(componentClasses, {
-                from: undefined,
-            }).then((res) => res.css),
+            envCss,
     ),
 );
 Deno.writeFile(
@@ -70,33 +52,12 @@ Deno.writeFile(
     ),
 );
 Deno.writeFile(
-    `./dist/oxiris-css-${VERSION}-env+utility.css`,
-    new TextEncoder().encode(
-        `/* ${AUTHOR_NOTE} */\n` +
-            await postcssProcessor.process(envCss + utilityClasses, {
-                from: undefined,
-            }).then((
-                res,
-            ) => res.css),
-    ),
-);
-Deno.writeFile(
-    `./dist/oxiris-css-${VERSION}-env+component.css`,
-    new TextEncoder().encode(
-        `/* ${AUTHOR_NOTE} */\n` +
-            await postcssProcessor.process(envCss + componentClasses, {
-                from: undefined,
-            }).then((
-                res,
-            ) => res.css),
-    ),
-);
-Deno.writeFile(
     `./dist/oxiris-css-${VERSION}-env+utility+component.css`,
     new TextEncoder().encode(
-        `/* ${AUTHOR_NOTE} */\n` +
+        `/* ${AUTHOR_NOTE} */\n\n` + "/* ENVIRONMENT LAYER */\n\n" + envCss +
+            "/* UTILITY AND COMPONENT LAYERS */\n\n" +
             await postcssProcessor.process(
-                envCss + componentClasses + utilityClasses,
+                componentClasses + utilityClasses,
                 { from: undefined },
             ).then((res) => res.css),
     ),
