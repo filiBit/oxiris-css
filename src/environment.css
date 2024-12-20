@@ -29,21 +29,27 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     color-scheme: dark;
-    --ox-neutral: hsl(0, 0%, 72%);
-    --ox-neutral-blur: hsl(0, 0%, 6%);
-    --ox-neutral-bg: unset;
-    --ox-primary: hsl(240, 57%, 81%);
-    --ox-primary-blur: hsl(240, 19%, 11%);
-    --ox-primary-bg: unset;
-    --ox-secondary: hsl(60, 43%, 54%);
-    --ox-secondary-blur: hsl(60, 26%, 7%);
-    --ox-secondary-bg: unset;
-    --ox-tertiary: hsl(330, 52%, 77%);
-    --ox-tertiary-blur: hsl(330, 17%, 10%);
-    --ox-tertiary-bg: unset;
-    --ox-quaternary: hsl(150, 46%, 61%);
-    --ox-quaternary-blur: hsl(150, 28%, 8%);
-    --ox-quaternary-bg: unset;
+
+    --ox-neutral-1: hsl(0, 0%, 72%);
+    --ox-neutral-2: unset;
+    --ox-neutral-3: hsl(0, 0%, 6%);
+
+    --ox-a-1: hsl(240, 57%, 81%);
+    --ox-a-2: unset;
+    --ox-a-3: hsl(240, 19%, 11%);
+
+    --ox-b-1: hsl(60, 43%, 54%);
+    --ox-b-2: unset;
+    --ox-b-3: hsl(60, 26%, 7%);
+
+    --ox-c-1: hsl(330, 52%, 77%);
+    --ox-c-2: unset;
+    --ox-c-3: hsl(330, 17%, 10%);
+
+    --ox-d-1: hsl(150, 46%, 61%);
+    --ox-d-2: unset;
+    --ox-d-3: hsl(150, 28%, 8%);
+
     --ox-background: hsl(150, 100%, 0%);
   }
 }
@@ -52,38 +58,44 @@ body {
 @media (prefers-color-scheme: light) {
   body {
     color-scheme: light;
-    --ox-neutral: hsl(0, 0%, 15%);
-    --ox-neutral-blur: hsl(0, 0%, 85%);
-    --ox-neutral-bg: hsl(0, 0%, 90%);
-    --ox-primary: hsl(240, 100%, 15%);
-    --ox-primary-blur: hsl(240, 20%, 85%);
-    --ox-primary-bg: hsl(240, 20%, 90%);
-    --ox-secondary: hsl(60, 100%, 15%);
-    --ox-secondary-blur: hsl(60, 30%, 80%);
-    --ox-secondary-bg: hsl(60, 90%, 92%);
-    --ox-tertiary: hsl(330, 100%, 15%);
-    --ox-tertiary-blur: hsl(330, 20%, 85%);
-    --ox-tertiary-bg: hsl(330, 20%, 90%);
-    --ox-quaternary: hsl(150, 100%, 15%);
-    --ox-quaternary-blur: hsl(150, 25%, 80%);
-    --ox-quaternary-bg: hsl(150, 50%, 92%);
+
+    --ox-neutral-1: hsl(0, 0%, 15%);
+    --ox-neutral-2: hsl(0, 0%, 90%);
+    --ox-neutral-3: hsl(0, 0%, 85%);
+
+    --ox-a-1: hsl(240, 100%, 15%);
+    --ox-a-2: hsl(240, 20%, 90%);
+    --ox-a-3: hsl(240, 20%, 85%);
+
+    --ox-b-1: hsl(60, 100%, 15%);
+    --ox-b-2: hsl(60, 90%, 92%);
+    --ox-b-3: hsl(60, 30%, 80%);
+
+    --ox-c-1: hsl(330, 100%, 15%);
+    --ox-c-2: hsl(330, 20%, 90%);
+    --ox-c-3: hsl(330, 20%, 85%);
+
+    --ox-d-1: hsl(150, 100%, 15%);
+    --ox-d-2: hsl(150, 50%, 92%);
+    --ox-d-3: hsl(150, 25%, 80%);
+
     --ox-background: hsl(150, 100%, 100%);
   }
 }
 
 /* Activate neutral color palette */
 body {
-  --ox-accent: var(--ox-neutral);
-  --ox-blur: var(--ox-neutral-blur);
-  --ox-accent-bg: var(--ox-neutral-bg, var(--ox-bg));
+  --ox-color-1: var(--ox-neutral-1);
+  --ox-color-2: var(--ox-neutral-2, var(--ox-background));
+  --ox-color-3: var(--ox-neutral-3);
   --ox-bg: var(--ox-background);
-  color: var(--ox-accent);
+  color: var(--ox-color-1);
   background: var(--ox-bg);
 }
 
 ::selection {
   color: var(--ox-bg);
-  background: var(--ox-quaternary);
+  background: var(--ox-d-1);
 }
 
 * {

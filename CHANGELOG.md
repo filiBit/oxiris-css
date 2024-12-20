@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `.fg=$bg` utility rule with declaration: `color: var(--ox-bg)`
-- `.bg=$fg` utility rule with declaration: `background: var(--ox-accent-)`
+- `.color-invert` utility rule for inverting the color scheme
+- `.color-renvert` utility rule for reverting the color scheme
 - Neutral color palette
 - Dark and light color schemes
 
@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename `.x-span`, `.max-x-span`, `.y-span` and `.max-y-span` into `.w-span`, `.max-w-span`, `.h-span` and `.max-h-span`
 - Rename `--ox-cell-width` to `--ox-grid-track-width`
 - Rename `--ox-cell-gap` to `--ox-cell-line-width`
+- Replace `.table` component rule with `.table-<{1, 2, 3, ..., 16}>`
+- Rename color variables
 
 ### Removed
 

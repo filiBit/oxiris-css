@@ -260,43 +260,43 @@ const borderRules: CssRuleDefinitionSet = [
     ],
     [
         "border-1px",
-        ["border: 1px solid var(--ox-accent)"],
+        ["border: 1px solid currentColor"],
     ],
     [
         "border-top-1px",
-        ["border-top: 1px solid var(--ox-accent)"],
+        ["border-top: 1px solid var(--ox-color-1)"],
     ],
     [
         "border-right-1px",
-        ["border-right: 1px solid var(--ox-accent)"],
+        ["border-right: 1px solid var(--ox-color-1)"],
     ],
     [
         "border-bottom-1px",
-        ["border-bottom: 1px solid var(--ox-accent)"],
+        ["border-bottom: 1px solid var(--ox-color-1)"],
     ],
     [
         "border-left-1px",
-        ["border-left: 1px solid var(--ox-accent)"],
+        ["border-left: 1px solid var(--ox-color-1)"],
     ],
     [
         "border-2px",
-        ["border: 2px solid var(--ox-accent)"],
+        ["border: 2px solid currentColor"],
     ],
     [
         "border-top-2px",
-        ["border-top: 2px solid var(--ox-accent)"],
+        ["border-top: 2px solid var(--ox-color-1)"],
     ],
     [
         "border-right-2px",
-        ["border-right: 2px solid var(--ox-accent)"],
+        ["border-right: 2px solid var(--ox-color-1)"],
     ],
     [
         "border-bottom-2px",
-        ["border-bottom: 2px solid var(--ox-accent)"],
+        ["border-bottom: 2px solid var(--ox-color-1)"],
     ],
     [
         "border-left-2px",
-        ["border-left: 2px solid var(--ox-accent)"],
+        ["border-left: 2px solid var(--ox-color-1)"],
     ],
 ];
 
@@ -307,40 +307,53 @@ const boxSizeRules: CssRuleDefinitionSet = [
 
 const colorRules: CssRuleDefinitionSet = [
     ["neutral", [
-        "color: var(--ox-neutral)",
-        "--ox-accent: var(--ox-neutral)",
-        "--ox-blur: var(--ox-neutral-blur)",
-        "--ox-accent-bg: var(--ox-neutral-bg, var(--ox-bg))",
+        "color: var(--ox-neutral-1)",
+        "--ox-color-1: var(--ox-neutral-1)",
+        "--ox-color-3: var(--ox-neutral-2)",
+        "--ox-color-2: var(--ox-neutral-3, var(--ox-bg))",
+        "background: var(--ox-background)",
     ]],
     ["primary", [
-        "color: var(--ox-primary)",
-        "--ox-accent: var(--ox-primary)",
-        "--ox-blur: var(--ox-primary-blur)",
-        "--ox-accent-bg: var(--ox-primary-bg, var(--ox-bg))",
+        "color: var(--ox-a-1)",
+        "--ox-color-1: var(--ox-a-1)",
+        "--ox-color-2: var(--ox-a-2, var(--ox-bg))",
+        "--ox-color-3: var(--ox-a-3)",
+        "background: var(--ox-background)",
     ]],
     ["secondary", [
-        "color: var(--ox-secondary)",
-        "--ox-accent: var(--ox-secondary)",
-        "--ox-blur: var(--ox-secondary-blur)",
-        "--ox-accent-bg: var(--ox-secondary-bg, var(--ox-bg))",
+        "color: var(--ox-b-1)",
+        "--ox-color-1: var(--ox-b-1)",
+        "--ox-color-2: var(--ox-b-2, var(--ox-bg))",
+        "--ox-color-3: var(--ox-b-3)",
+        "background: var(--ox-background)",
     ]],
     ["tertiary", [
-        "color: var(--ox-tertiary)",
-        "--ox-accent: var(--ox-tertiary)",
-        "--ox-blur: var(--ox-tertiary-blur)",
-        "--ox-accent-bg: var(--ox-tertiary-bg, var(--ox-bg))",
+        "color: var(--ox-c-1)",
+        "--ox-color-1: var(--ox-c-1)",
+        "--ox-color-2: var(--ox-c-2, var(--ox-bg))",
+        "--ox-color-3: var(--ox-c-3)",
+        "background: var(--ox-background)",
     ]],
     ["quaternary", [
-        "color: var(--ox-quaternary)",
-        "--ox-accent: var(--ox-quaternary)",
-        "--ox-blur: var(--ox-quaternary-blur)",
-        "--ox-accent-bg: var(--ox-quaternary-bg, var(--ox-bg))",
+        "color: var(--ox-d-1)",
+        "--ox-color-1: var(--ox-d-1)",
+        "--ox-color-2: var(--ox-d-2, var(--ox-bg))",
+        "--ox-color-3: var(--ox-d-3)",
+        "background: var(--ox-background)",
     ]],
     ["solid", [
-        "background: var(--ox-accent-bg)",
+        "background: var(--ox-color-2)",
     ]],
-    ["fg\\=\\$bg", ["color: var(--ox-bg)"]],
-    ["bg\\=\\$fg", ["background: var(--ox-accent)"]],
+    ["color-invert", [
+        "color: var(--ox-background)",
+        "background: var(--ox-color-1)",
+        "border-color: currentColor",
+    ]],
+    ["color-revert", [
+        "color: var(--ox-color-1)",
+        "background: var(--ox-background)",
+        "border-color: currentColor",
+    ]],
 ];
 
 const letterRules: CssRuleDefinitionSet = [
