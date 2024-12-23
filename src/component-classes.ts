@@ -33,11 +33,6 @@ const tableRules: CssRuleDefinitionSet = Array.from(new Array(16)).flatMap((
     [
         "border-bottom: none",
     ],
-], [
-    `table-${n + 1} *:nth-of-type(${n + 2}n):nth-of-type(${n + 2}n + 2)`,
-    [
-        "background: var(--ox-color-3)",
-    ],
 ]]);
 
 const cssRules: CssRuleDefinitionSet = [
