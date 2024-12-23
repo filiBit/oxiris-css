@@ -264,19 +264,19 @@ const borderRules: CssRuleDefinitionSet = [
     ],
     [
         "border-top-1px",
-        ["border-top: 1px solid var(--ox-color-1)"],
+        ["border-top: 1px solid currentColor"],
     ],
     [
         "border-right-1px",
-        ["border-right: 1px solid var(--ox-color-1)"],
+        ["border-right: 1px solid currentColor"],
     ],
     [
         "border-bottom-1px",
-        ["border-bottom: 1px solid var(--ox-color-1)"],
+        ["border-bottom: 1px solid currentColor"],
     ],
     [
         "border-left-1px",
-        ["border-left: 1px solid var(--ox-color-1)"],
+        ["border-left: 1px solid currentColor"],
     ],
     [
         "border-2px",
@@ -284,19 +284,19 @@ const borderRules: CssRuleDefinitionSet = [
     ],
     [
         "border-top-2px",
-        ["border-top: 2px solid var(--ox-color-1)"],
+        ["border-top: 2px solid currentColor"],
     ],
     [
         "border-right-2px",
-        ["border-right: 2px solid var(--ox-color-1)"],
+        ["border-right: 2px solid currentColor"],
     ],
     [
         "border-bottom-2px",
-        ["border-bottom: 2px solid var(--ox-color-1)"],
+        ["border-bottom: 2px solid currentColor"],
     ],
     [
         "border-left-2px",
-        ["border-left: 2px solid var(--ox-color-1)"],
+        ["border-left: 2px solid currentColor"],
     ],
 ];
 
