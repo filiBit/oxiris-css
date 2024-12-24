@@ -6,10 +6,10 @@ const hRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `h-${idx}`,
-    [`height: calc(${idx} * var(--ox-base-length))`],
+    [`height: calc(${idx} * var(--ox-base-length))`, "flex-shrink: 0"],
 ]);
 
-hRules.push(["h-100\\%", ["height: 100%"]]);
+hRules.push(["h-100\\%", ["height: 100%", "flex-shrink: 0"]]);
 
 const maxHRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
@@ -44,10 +44,10 @@ const wRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     idx,
 ) => [
     `w-${idx}`,
-    [`width: calc(${idx} * var(--ox-base-length))`],
+    [`width: calc(${idx} * var(--ox-base-length))`, "flex-shrink: 0"],
 ]);
 
-wRules.push(["w-100\\%", ["width: 100%"]]);
+wRules.push(["w-100\\%", ["width: 100%", "flex-shrink: 0"]]);
 
 const maxWRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
@@ -71,44 +71,70 @@ const roundRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     `border-radius: calc(var(--ox-round-factor) * ${idx} * var(--ox-base-length))`,
 ]]);
 
-const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
+const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
     idx,
 ) => [
-    `w-span-${idx + 1}`,
-    [`width: calc(${
-        idx + 1
-    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
+    `w-span-${idx}`,
+    [
+        `width: calc(${idx} * var(--ox-grid-track-width) + ${
+            idx - 1
+        } * var(--ox-grid-line-width))`,
+        "flex-shrink: 0",
+    ],
 ]);
 
-const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
+const minWSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
     idx,
 ) => [
-    `max-w-span-${idx + 1}`,
-    [`max-width: calc(${
-        idx + 1
-    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
+    `min-w-span-${idx}`,
+    [`min-width: calc(${idx} * var(--ox-grid-track-width) + ${
+        idx - 1
+    } * var(--ox-grid-line-width))`],
 ]);
 
-const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
+const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
     idx,
 ) => [
-    `h-span-${idx + 1}`,
-    [`height: calc(${
-        idx + 1
-    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
+    `max-w-span-${idx}`,
+    [`max-width: calc(${idx} * var(--ox-grid-track-width) + ${
+        idx - 1
+    } * var(--ox-grid-line-width))`],
 ]);
 
-const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(16)).map((
+const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
     idx,
 ) => [
-    `max-h-span-${idx + 1}`,
-    [`max-height: calc(${
-        idx + 1
-    } * var(--ox-grid-track-width) + ${idx} * var(--ox-grid-line-width))`],
+    `h-span-${idx}`,
+    [
+        `height: calc(${idx} * var(--ox-grid-track-width) + ${
+            idx - 1
+        } * var(--ox-grid-line-width))`,
+        "flex-shrink: 0",
+    ],
+]);
+
+const minHSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+    _,
+    idx,
+) => [
+    `min-h-span-${idx}`,
+    [`min-height: calc(${idx} * var(--ox-grid-track-width) + ${
+        idx - 1
+    } * var(--ox-grid-line-width))`],
+]);
+
+const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+    _,
+    idx,
+) => [
+    `max-h-span-${idx}`,
+    [`max-height: calc(${idx} * var(--ox-grid-track-width) + ${
+        idx - 1
+    } * var(--ox-grid-line-width))`],
 ]);
 
 const mRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
@@ -410,8 +436,10 @@ const cssRules: CssRuleDefinitionSet = [
     ...gapRules,
     ...roundRules,
     ...wSpanRules,
+    ...minWSpanRules,
     ...maxWSpanRules,
     ...hSpanRules,
+    ...minHSpanRules,
     ...maxHSpanRules,
     ...mRules,
     ...pRules,
