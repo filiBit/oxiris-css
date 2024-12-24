@@ -306,52 +306,86 @@ const boxSizeRules: CssRuleDefinitionSet = [
 ];
 
 const colorRules: CssRuleDefinitionSet = [
-    ["neutral", [
+    ["hue-neutral", [
         "color: var(--ox-neutral-1)",
         "--ox-color-1: var(--ox-neutral-1)",
-        "--ox-color-3: var(--ox-neutral-2)",
-        "--ox-color-2: var(--ox-neutral-3, var(--ox-bg))",
-        "background: var(--ox-background)",
+        "--ox-color-2: var(--ox-neutral-2)",
+        "--ox-color-2: var(--ox-neutral-3)",
+        "--ox-fg: var(--ox-neutral-1)",
+        "--ox-bg: var(--ox-background)",
     ]],
-    ["primary", [
+    ["hue-a", [
         "color: var(--ox-a-1)",
         "--ox-color-1: var(--ox-a-1)",
-        "--ox-color-2: var(--ox-a-2, var(--ox-bg))",
+        "--ox-color-2: var(--ox-a-2)",
         "--ox-color-3: var(--ox-a-3)",
-        "background: var(--ox-background)",
+        "--ox-fg: var(--ox-a-1)",
+        "--ox-bg: var(--ox-background)",
     ]],
-    ["secondary", [
+    ["hue-b", [
         "color: var(--ox-b-1)",
         "--ox-color-1: var(--ox-b-1)",
-        "--ox-color-2: var(--ox-b-2, var(--ox-bg))",
+        "--ox-color-2: var(--ox-b-2)",
         "--ox-color-3: var(--ox-b-3)",
-        "background: var(--ox-background)",
+        "--ox-fg: var(--ox-b-1)",
+        "--ox-bg: var(--ox-background)",
     ]],
-    ["tertiary", [
+    ["hue-c", [
         "color: var(--ox-c-1)",
         "--ox-color-1: var(--ox-c-1)",
-        "--ox-color-2: var(--ox-c-2, var(--ox-bg))",
+        "--ox-color-2: var(--ox-c-2)",
         "--ox-color-3: var(--ox-c-3)",
-        "background: var(--ox-background)",
+        "--ox-fg: var(--ox-c-1)",
+        "--ox-bg: var(--ox-background)",
     ]],
-    ["quaternary", [
+    ["hue-d", [
         "color: var(--ox-d-1)",
         "--ox-color-1: var(--ox-d-1)",
-        "--ox-color-2: var(--ox-d-2, var(--ox-bg))",
+        "--ox-color-2: var(--ox-d-2)",
         "--ox-color-3: var(--ox-d-3)",
-        "background: var(--ox-background)",
+        "--ox-fg: var(--ox-d-1)",
+        "--ox-bg: var(--ox-background)",
     ]],
-    ["solid", [
+    ["chroma-fg-0", [
+        "color: var(--ox-background)",
+        "--ox-fg: var(--ox-background)",
+    ]],
+    ["chroma-fg-1", [
+        "color: var(--ox-color-1)",
+        "--ox-fg: var(--ox-color-1)",
+    ]],
+    ["chroma-fg-2", [
+        "color: var(--ox-color-2)",
+        "--ox-fg: var(--ox-color-2)",
+    ]],
+    ["chroma-fg-3", [
+        "color: var(--ox-color-3)",
+        "--ox-fg: var(--ox-color-3)",
+    ]],
+    ["chroma-bg-0", [
+        "background: var(--ox-background)",
+        "--ox-bg: var(--ox-background)",
+    ]],
+    ["chroma-bg-1", [
+        "background: var(--ox-color-1)",
+        "--ox-bg: var(--ox-color-1)",
+    ]],
+    ["chroma-bg-2", [
         "background: var(--ox-color-2)",
+        "--ox-bg: var(--ox-color-2)",
+    ]],
+    ["chroma-bg-3", [
+        "background: var(--ox-color-3)",
+        "--ox-bg: var(--ox-color-3)",
     ]],
     ["color-invert", [
-        "color: var(--ox-background)",
-        "background: var(--ox-color-1)",
+        "color: var(--ox-bg)",
+        "background: var(--ox-fg)",
         "border-color: currentColor",
     ]],
     ["color-revert", [
-        "color: var(--ox-color-1)",
-        "background: var(--ox-background)",
+        "color: var(--ox-fg)",
+        "background: var(--ox-bg)",
         "border-color: currentColor",
     ]],
 ];
