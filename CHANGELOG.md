@@ -28,6 +28,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replace `.table` component rule with `.table-<{1, 2, 3, ..., 16}>`
 - Rename color variables
 - declaration blocks of following rules `.w-<n>`, `.w-span-<n>`, `.h-<n>` and `h-span-<n>` now include a `flex-shrink: 0` declaration
+- Rename `.button.active` to `.button.var-contained`
+- Rename `.button.toggle` and `.button.toggle.active` to `.button.var-indicator` and `.button-var-indicator.var-indicator-filled`
 
 ### Removed
 

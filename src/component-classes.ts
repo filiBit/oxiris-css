@@ -44,33 +44,57 @@ const cssRules: CssRuleDefinitionSet = [
             "display: flex",
             "align-items: center",
             "justify-content: center",
-            "border: 1px solid currentColor",
+            "border: 1px solid var(--ox-fg)",
             "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
             "padding: 0 calc(2 * var(--ox-base-length))",
             "height: calc(6 * var(--ox-base-length))",
             "text-decoration: none",
             "font-size: inherit",
             "line-height: 1.5",
-            "color: var(--ox-color-1)",
-            "background: var(--ox-color-2)",
+            "color: var(--ox-fg)",
+            "background: var(--ox-bg)",
             "font-family: inherit",
             "user-select: none",
             "cursor: pointer",
             "letter-spacing: inherit",
         ],
     ],
-    ["button.disabled,.button:disabled", [
-        "filter: opacity(0.6)",
-        "cursor: not-allowed",
+    ["button:hover", [
+        "filter: brightness(1.2)",
     ]],
-    ["button.active:not(.toggle)", [
+    ["button.var-contained", [
+        "border: none",
         "color: var(--ox-bg)",
-        "background: var(--ox-color-1)",
+        "background: var(--ox-fg)",
     ]],
-    ["button.toggle", [
+    ["button.var-indicator,.button.var-indicator-filled", [
         "padding-right: calc(3 * var(--ox-base-length))",
     ]],
-
+    ["button.var-indicator::after,.button.var-indicator-filled::after", [
+        'content: ""',
+        "position: absolute",
+        "top: var(--ox-base-length)",
+        "right: var(--ox-base-length)",
+        "border: 1px solid currentColor",
+        "width: var(--ox-base-length)",
+        "height: var(--ox-base-length)",
+        "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
+        "background: none",
+    ]],
+    [
+        "button.var-indicator-filled::after",
+        [
+            "background: currentColor !important",
+        ],
+    ],
+    [
+        "button.disabled,.button:disabled,.button-contained.disabled,.button-contained:disabled",
+        [
+            "opacity: 0.6",
+            "cursor: not-allowed",
+        ],
+    ],
+    ["link:hover", ["background: var(--ox-color-1)", "color: var(--ox-bg)"]],
     ["h1", [
         "font-size: var(--ox-f-size-2xl)",
         "font-weight: var(--ox-f-weight-lg)",
@@ -93,33 +117,6 @@ const cssRules: CssRuleDefinitionSet = [
     ]],
 ];
 
-const cssPseudoRules: CssRuleDefinitionSet = [
-    ["button:hover", [
-        "background: var(--ox-color-3)",
-    ]],
-    ["button.active:hover:not(.toggle)", [
-        "filter: brightness(0.8)",
-    ]],
-    ["button:active", [
-        "filter: brightness(0.7)",
-    ]],
-    ["button.toggle::after", [
-        'content: ""',
-        "position: absolute",
-        "top: var(--ox-base-length)",
-        "right: var(--ox-base-length)",
-        "border: 1px solid currentColor",
-        "width: var(--ox-base-length)",
-        "height: var(--ox-base-length)",
-        "background: none",
-        "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
-    ]],
-    ["button.toggle.active::after", [
-        "background: var(--ox-color-1)",
-    ]],
-    ["link:hover", ["background: var(--ox-color-1)", "color: var(--ox-bg)"]],
-];
-
 export function makeComponentClasses(): string {
     let text = "";
 
@@ -134,10 +131,6 @@ export function makeComponentClasses(): string {
         }
 
         text += "}\n";
-    }
-
-    for (const [k, v] of cssPseudoRules) {
-        text += `.${k} {\n${v.join(";\n")};\n}\n`;
     }
 
     return text;
