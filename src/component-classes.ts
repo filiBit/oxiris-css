@@ -24,12 +24,12 @@ const tableRules: CssRuleDefinitionSet = Array.from(new Array(16)).flatMap((
         "min-height: calc(6 * var(--ox-base-length))",
     ],
 ], [
-    `table-${n + 1} *:nth-of-type(${n + 1}n)`,
+    `table-${n + 1} > *:nth-of-type(${n + 1}n)`,
     [
         "border-right: none",
     ],
 ], [
-    `table-${n + 1} *:nth-last-of-type(-n + ${n + 1})`,
+    `table-${n + 1} > *:nth-last-of-type(-n + ${n + 1})`,
     [
         "border-bottom: none",
     ],
