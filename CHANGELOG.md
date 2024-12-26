@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename `--ox-cell-gap` to `--ox-cell-line-width`
 - Replace `.table` component rule with `.table-<{1, 2, 3, ..., 16}>`
 - Rename color variables
-- declaration blocks of following rules `.w`, `.w-span`, `.h` and `h-span` now include a `flex-shrink: 0` declaration
+- declaration blocks of following rules `.w-<n>`, `.w-span-<n>`, `.h-<n>` and `h-span-<n>` now include a `flex-shrink: 0` declaration
 
 ### Removed
 
