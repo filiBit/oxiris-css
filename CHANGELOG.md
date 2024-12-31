@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.hue-<{ a, b, c, d }>` utility rules for applying the context of a hue palette
 - `.chroma-fg-<{ 1, 2, 3 }>` utility rules for applying the chroma of an active hue context to a foreground
 - `.chroma-bg-<{ 1, 2, 3 }>` utility rules for applying the chroma of an active hue context to a background
+- State modifiers `active`, `focus` and `open`
+- Support for stacking media with state modifiers
 
 ### Changed
 

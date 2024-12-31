@@ -1,5 +1,4 @@
-import { breakpoints } from "./breakpoints.ts";
-import type { CssRuleDefinitionSet } from "./types.ts";
+import type { CssRuleDefinitionSet } from "../common/rule.ts";
 
 const hRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
@@ -426,7 +425,7 @@ const filterRules: CssRuleDefinitionSet = [
     ["filter-no", ["filter: none"]],
 ];
 
-const cssRules: CssRuleDefinitionSet = [
+export const definitions: CssRuleDefinitionSet = [
     ...borderRules,
     ...hRules,
     ...minHRules,
@@ -571,32 +570,3 @@ const cssRules: CssRuleDefinitionSet = [
     ],
     ["break-all", ["word-break: break-all"]],
 ];
-
-const cssHoverRules: CssRuleDefinitionSet = [
-    ...borderRules,
-    ...roundRules,
-    ...colorRules,
-    ...filterRules,
-];
-
-export function makeUtilityClasses(): string {
-    let text = "";
-
-    for (const [k, v] of cssRules) {
-        text += `.${k} {\n${v.join(";\n")};\n}\n`;
-    }
-
-    for (const [prefix, value] of breakpoints) {
-        text += `@media (min-width: ${value}) {\n`;
-        for (const [k, v] of cssRules) {
-            text += `.${prefix}\\:${k} {\n${v.join(";\n")};\n}\n`;
-        }
-        text += "}\n";
-    }
-
-    for (const [k, v] of cssHoverRules) {
-        text += `.hover\\:${k}:hover {\n${v.join(";\n")};\n}\n`;
-    }
-
-    return text;
-}

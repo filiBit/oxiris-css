@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "deno run -R -W -E build.ts",
+    "build": "deno run -R -W -E src/build.ts",
     "dev": "deno run -R -W -E --watch=src/environment.css build.ts"
   },
   "imports": {

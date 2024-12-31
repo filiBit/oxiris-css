@@ -1,5 +1,4 @@
-import { breakpoints } from "./breakpoints.ts";
-import type { CssRuleDefinitionSet } from "./types.ts";
+import type { CssRuleDefinitionSet } from "../common/rule.ts";
 
 const tableRules: CssRuleDefinitionSet = Array.from(new Array(16)).flatMap((
     _,
@@ -35,7 +34,7 @@ const tableRules: CssRuleDefinitionSet = Array.from(new Array(16)).flatMap((
     ],
 ]]);
 
-const cssRules: CssRuleDefinitionSet = [
+export const definitions: CssRuleDefinitionSet = [
     ...tableRules,
     [
         "button",
@@ -116,22 +115,3 @@ const cssRules: CssRuleDefinitionSet = [
         "font-weight: var(--ox-f-weight-sm)",
     ]],
 ];
-
-export function makeComponentClasses(): string {
-    let text = "";
-
-    for (const [k, v] of cssRules) {
-        text += `.${k} {\n${v.join(";\n")};\n}\n`;
-    }
-
-    for (const [prefix, value] of breakpoints) {
-        text += `@media (min-width: ${value}) {\n`;
-        for (const [k, v] of cssRules) {
-            text += `.${prefix}\\:${k} {\n${v.join(";\n")};\n}\n`;
-        }
-
-        text += "}\n";
-    }
-
-    return text;
-}
