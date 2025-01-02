@@ -418,6 +418,8 @@ const colorRules: CssRuleDefinitionSet = [
 const letterRules: CssRuleDefinitionSet = [
     ["letter-0\\.05em", ["letter-spacing: 0.05em"]],
     ["letter-0\\.1em", ["letter-spacing: 0.1em"]],
+    ["letter-0\\.15em", ["letter-spacing: 0.15em"]],
+    ["letter-0\\.2em", ["letter-spacing: 0.2em"]],
 ];
 
 const filterRules: CssRuleDefinitionSet = [

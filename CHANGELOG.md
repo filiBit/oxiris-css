@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.chroma-bg-<{ 1, 2, 3 }>` utility rules for applying the chroma of an active hue context to a background
 - State modifiers `active`, `focus` and `open`
 - Support for stacking media with state modifiers
+- Utilities `.letter-0.15em` and `.letter-0.2em`
 
 ### Changed
 
