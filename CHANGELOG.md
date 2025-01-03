@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `.tab-bar` component rule
 - `.solid` utility rule
+- `.text-sm` and `.text-md` components
 
 ### Fixed
 

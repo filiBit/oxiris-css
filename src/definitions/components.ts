@@ -107,12 +107,4 @@ export const definitions: CssRuleDefinitionSet = [
         "font-size: var(--ox-f-size-lg)",
         "font-weight: var(--ox-f-weight-2xl)",
     ]],
-    ["text-md", [
-        "font-size: var(--ox-f-size-md)",
-        "font-weight: var(--ox-f-weight-md)",
-    ]],
-    ["text-sm", [
-        "font-size: var(--ox-f-size-sm)",
-        "font-weight: var(--ox-f-weight-sm)",
-    ]],
 ];
