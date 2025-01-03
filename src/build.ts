@@ -16,11 +16,11 @@ import {
     STATE_MODIFIER_DEFINITIONS,
 } from "./definitions/modifiers.ts";
 
-const VERSION = "1.0.0";
+const VERSION = "2.0.0";
 
-const currentYear = new Date().getUTCFullYear();
+const creationYear = 2024;
 
-const AUTHOR_NOTE = `Oxiris CSS ${VERSION} ${currentYear} Filip Biterski`;
+const AUTHOR_NOTE = `Oxiris CSS ${VERSION} © ${creationYear} Filip Biterski`;
 
 const envCss = new TextDecoder().decode(
     await Deno.readFile("./src/definitions/environment.css"),
