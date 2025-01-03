@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - declaration blocks of following rules `.w-<n>`, `.w-span-<n>`, `.h-<n>` and `h-span-<n>` now include a `flex-shrink: 0` declaration
 - Rename `.button.active` to `.button.var-contained`
 - Rename `.button.toggle` and `.button.toggle.active` to `.button.var-indicator` and `.button-var-indicator.var-indicator-filled`
+- `.link` component now uses pointer cursor and has an underline
 
 ### Removed
 
