@@ -501,6 +501,30 @@ export const definitions: CssRuleDefinitionSet = [
         ["align-items: flex-end"],
     ],
     [
+        "align-self-start",
+        ["align-self: flex-start"],
+    ],
+    [
+        "align-self-center",
+        ["align-self: center"],
+    ],
+    [
+        "align-self-end",
+        ["align-self: flex-end"],
+    ],
+    [
+        "justify-self-start",
+        ["justify-self: start"],
+    ],
+    [
+        "justify-self-center",
+        ["justify-self: center"],
+    ],
+    [
+        "justify-self-end",
+        ["justify-self: end"],
+    ],
+    [
         "grow-0",
         ["flex-grow: 0"],
     ],
