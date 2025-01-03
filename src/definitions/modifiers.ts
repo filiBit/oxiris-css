@@ -17,6 +17,14 @@ export const STATE_MODIFIER_DEFINITIONS: ModifierDefinition[] = [
         "open\\:",
         "[open]",
     ],
+    [
+        "dark .dark\\:",
+        "",
+    ],
+    [
+        "light .light\\:",
+        "",
+    ],
 ];
 
 export const MEDIA_QUERY_DEFINITIONS: ModifierDefinition[] = [
@@ -40,12 +48,6 @@ export const MEDIA_QUERY_DEFINITIONS: ModifierDefinition[] = [
         "\\2xl\\:",
         "min-width: 1536px",
     ],
-    [
-        "dark\\:",
-        "prefers-color-scheme: dark",
-    ],
-    [
-        "light\\:",
-        "prefers-color-scheme: light",
-    ],
 ];
+
+export const PARENT_QUERY_DEFINITIONS: ModifierDefinition[] = [];
