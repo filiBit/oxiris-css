@@ -93,6 +93,7 @@ export const definitions: CssRuleDefinitionSet = [
             "cursor: not-allowed",
         ],
     ],
+    ["link", ["text-decoration: underline", "cursor: pointer"]],
     ["link:hover", ["background: var(--ox-color-1)", "color: var(--ox-bg)"]],
     ["h1", [
         "font-size: var(--ox-f-size-2xl)",
