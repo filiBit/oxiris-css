@@ -1,0 +1,175 @@
+html {
+  font-size: 0.625rem;
+}
+
+body {
+  --ox-base-length: 8px;
+
+  --ox-grid-track-width: calc(6 * var(--ox-base-length));
+  --ox-grid-line-width: calc(var(--ox-grid-track-width) / 2);
+
+  --ox-round-factor: 1;
+
+  font-size: 1.8rem;
+
+  --ox-f-size-sm: 1.6rem;
+  --ox-f-size-md: 1.8rem;
+  --ox-f-size-lg: 2.2rem;
+  --ox-f-size-xl: 2.6rem;
+  --ox-f-size-2xl: 3.2rem;
+
+  --ox-f-weight-sm: 400;
+  --ox-f-weight-md: 400;
+  --ox-f-weight-lg: 500;
+  --ox-f-weight-xl: 600;
+  --ox-f-weight-2xl: 700;
+}
+
+/* Dark color scheme */
+@media (prefers-color-scheme: dark) {
+  body,
+  .dark {
+    --ox-neutral-1: oklch(78% 0 0);
+    --ox-neutral-2: oklch(20% 0 0);
+    --ox-neutral-3: oklch(16% 0 0);
+
+    --ox-a-1: oklch(78% 0.09 224);
+    --ox-a-2: oklch(20% 0.02 224);
+    --ox-a-3: oklch(16% 0.015 224);
+
+    --ox-b-1: oklch(78% 0.09 108);
+    --ox-b-2: oklch(20% 0.02 108);
+    --ox-b-3: oklch(16% 0.015 108);
+
+    --ox-c-1: oklch(78% 0.09 347);
+    --ox-c-2: oklch(20% 0.02 348);
+    --ox-c-3: oklch(16% 0.015 348);
+
+    --ox-d-1: oklch(78% 0.09 160);
+    --ox-d-2: oklch(20% 0.02 160);
+    --ox-d-3: oklch(16% 0.015 160);
+
+    --ox-background: oklch(0% 0 0);
+
+    --ox-color-1: var(--ox-neutral-1);
+    --ox-color-2: var(--ox-neutral-2, var(--ox-background));
+    --ox-color-3: var(--ox-neutral-3);
+    --ox-fg: var(--ox-neutral-1);
+    --ox-bg: var(--ox-background);
+    color: var(--ox-color-1);
+    background: var(--ox-bg);
+  }
+
+  *.light {
+    --ox-neutral-1: oklch(30% 0 0);
+    --ox-neutral-2: oklch(88% 0 0);
+    --ox-neutral-3: oklch(93% 0 0);
+
+    --ox-a-1: oklch(30% 0.09 224);
+    --ox-a-2: oklch(88% 0.035 224);
+    --ox-a-3: oklch(93% 0.02 224);
+
+    --ox-b-1: oklch(30% 0.09 108);
+    --ox-b-2: oklch(88% 0.035 108);
+    --ox-b-3: oklch(93% 0.02 108);
+
+    --ox-c-1: oklch(30% 0.15 347);
+    --ox-c-2: oklch(88% 0.035 347);
+    --ox-c-3: oklch(93% 0.02 347);
+
+    --ox-d-1: oklch(30% 0.09 160);
+    --ox-d-2: oklch(88% 0.035 160);
+    --ox-d-3: oklch(93% 0.02 160);
+
+    --ox-background: oklch(100% 0 0);
+
+    --ox-color-1: var(--ox-neutral-1);
+    --ox-color-2: var(--ox-neutral-2, var(--ox-background));
+    --ox-color-3: var(--ox-neutral-3);
+    --ox-fg: var(--ox-neutral-1);
+    --ox-bg: var(--ox-background);
+    color: var(--ox-color-1);
+    background: var(--ox-bg);
+  }
+}
+
+/* Light color scheme */
+@media (prefers-color-scheme: light) {
+  body,
+  .light {
+    --ox-neutral-1: oklch(30% 0 0);
+    --ox-neutral-2: oklch(88% 0 0);
+    --ox-neutral-3: oklch(93% 0 0);
+
+    --ox-a-1: oklch(30% 0.09 224);
+    --ox-a-2: oklch(88% 0.035 224);
+    --ox-a-3: oklch(93% 0.02 224);
+
+    --ox-b-1: oklch(30% 0.09 108);
+    --ox-b-2: oklch(88% 0.035 108);
+    --ox-b-3: oklch(93% 0.02 108);
+
+    --ox-c-1: oklch(30% 0.15 347);
+    --ox-c-2: oklch(88% 0.035 347);
+    --ox-c-3: oklch(93% 0.02 347);
+
+    --ox-d-1: oklch(30% 0.09 160);
+    --ox-d-2: oklch(88% 0.035 160);
+    --ox-d-3: oklch(93% 0.02 160);
+
+    --ox-background: oklch(100% 0 0);
+
+    --ox-color-1: var(--ox-neutral-1);
+    --ox-color-2: var(--ox-neutral-2, var(--ox-background));
+    --ox-color-3: var(--ox-neutral-3);
+    --ox-fg: var(--ox-neutral-1);
+    --ox-bg: var(--ox-background);
+    color: var(--ox-color-1);
+    background: var(--ox-bg);
+  }
+
+  *.dark {
+    --ox-neutral-1: oklch(78% 0 0);
+    --ox-neutral-2: oklch(20% 0 0);
+    --ox-neutral-3: oklch(16% 0 0);
+
+    --ox-a-1: oklch(78% 0.09 224);
+    --ox-a-2: oklch(20% 0.02 224);
+    --ox-a-3: oklch(16% 0.015 224);
+
+    --ox-b-1: oklch(78% 0.09 108);
+    --ox-b-2: oklch(20% 0.02 108);
+    --ox-b-3: oklch(16% 0.015 108);
+
+    --ox-c-1: oklch(78% 0.09 347);
+    --ox-c-2: oklch(20% 0.02 348);
+    --ox-c-3: oklch(16% 0.015 348);
+
+    --ox-d-1: oklch(78% 0.09 160);
+    --ox-d-2: oklch(20% 0.02 160);
+    --ox-d-3: oklch(16% 0.015 160);
+
+    --ox-background: oklch(0% 0 0);
+
+    --ox-color-1: var(--ox-neutral-1);
+    --ox-color-2: var(--ox-neutral-2, var(--ox-background));
+    --ox-color-3: var(--ox-neutral-3);
+    --ox-fg: var(--ox-neutral-1);
+    --ox-bg: var(--ox-background);
+    color: var(--ox-color-1);
+    background: var(--ox-bg);
+  }
+}
+
+::selection {
+  color: var(--ox-bg);
+  background: var(--ox-d-1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: currentColor;
+}
