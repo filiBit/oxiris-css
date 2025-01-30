@@ -9,7 +9,7 @@ const tableRules: CssRuleDefinitionSet = Array.from(new Array(16)).flatMap((
         "display: grid",
         `grid-template-columns: repeat(${n + 1}, auto)`,
         "border: 1px solid currentColor",
-        "border-radius: var(--ox-base-length)",
+        "border-radius: calc(var(--ox-round-factor) * var(--ox-base-length))",
         "overflow: hidden",
     ],
 ], [
