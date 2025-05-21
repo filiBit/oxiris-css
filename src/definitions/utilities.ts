@@ -595,4 +595,8 @@ export const definitions: CssRuleDefinitionSet = [
         ["font-weight: var(--ox-f-weight-xl)"],
     ],
     ["break-all", ["word-break: break-all"]],
+    ["select-none", ["user-select: none"]],
+    ["select-text", ["user-select: text"]],
+    ["select-all", ["user-select: all"]],
+    ["select-auto", ["user-select: auto"]],
 ];
