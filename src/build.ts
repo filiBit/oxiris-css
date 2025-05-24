@@ -16,7 +16,7 @@ import {
     STATE_MODIFIER_DEFINITIONS,
 } from "./definitions/modifiers.ts";
 
-const VERSION = "2.2.0";
+const VERSION = "2.3.0";
 
 const creationYear = 2024;
 
