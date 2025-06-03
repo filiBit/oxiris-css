@@ -8,7 +8,9 @@ const hRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     [`height: calc(${idx} * var(--ox-base-length))`, "flex-shrink: 0"],
 ]);
 
-hRules.push(["h-100\\%", ["height: 100%", "flex-shrink: 0"]]);
+hRules.push(["h-100\\%", ["height: 100%", "flex-shrink: 0"]], ["h-auto", [
+    "height: auto",
+]]);
 
 const maxHRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
@@ -46,7 +48,9 @@ const wRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     [`width: calc(${idx} * var(--ox-base-length))`, "flex-shrink: 0"],
 ]);
 
-wRules.push(["w-100\\%", ["width: 100%", "flex-shrink: 0"]]);
+wRules.push(["w-100\\%", ["width: 100%", "flex-shrink: 0"]], ["w-auto", [
+    "width: auto",
+]]);
 
 const maxWRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     _,
