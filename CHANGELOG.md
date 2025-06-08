@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Increased the range of length multiples from `{0, 1, 2, ..., 16}` to `{0, 1, 2, ..., 32}`. Example: `w-span-27`.
+- Expanded the range for the font size from `sm - 2xl` into `xs - 3xl`
 
 ## [2.4.0] 2025-06-04
 
