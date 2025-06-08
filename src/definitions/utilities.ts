@@ -563,6 +563,10 @@ export const definitions: CssRuleDefinitionSet = [
     ["overflow-no", ["overflow: hidden"]],
     ["basis-1", ["flex-basis: 1px;"]],
     [
+        "f-size-xs",
+        ["font-size: var(--ox-f-size-xs)"],
+    ],
+    [
         "f-size-sm",
         ["font-size: var(--ox-f-size-sm)"],
     ],
@@ -581,6 +585,10 @@ export const definitions: CssRuleDefinitionSet = [
     [
         "f-size-2xl",
         ["font-size: var(--ox-f-size-2xl)"],
+    ],
+    [
+        "f-size-3xl",
+        ["font-size: var(--ox-f-size-3xl)"],
     ],
     [
         "f-weight-sm",
