@@ -1,6 +1,6 @@
 import type { CssRuleDefinitionSet } from "../common/rule.ts";
 
-const hRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const hRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -12,7 +12,7 @@ hRules.push(["h-100\\%", ["height: 100%", "flex-shrink: 0"]], ["h-auto", [
     "height: auto",
 ]]);
 
-const maxHRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const maxHRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -24,7 +24,7 @@ maxHRules.push(["max-h-100\\%", ["max-height: 100%"]], ["max-h-100vh", [
     "max-height: 100vh",
 ]]);
 
-const minHRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const minHRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -40,7 +40,7 @@ maxHRules.push(["max-h-100\\%", ["max-height: 100%"]], ["max-h-100vh", [
     "max-height: 100vh",
 ]]);
 
-const wRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const wRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -52,7 +52,7 @@ wRules.push(["w-100\\%", ["width: 100%", "flex-shrink: 0"]], ["w-auto", [
     "width: auto",
 ]]);
 
-const maxWRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const maxWRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -62,19 +62,19 @@ const maxWRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
 
 maxWRules.push(["max-w-100\\%", ["max-width: 100%"]]);
 
-const gapRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const gapRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [`gap-${idx}`, [`gap: calc(${idx} * var(--ox-base-length))`]]);
 
-const roundRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const roundRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [`round-${idx}`, [
     `border-radius: calc(var(--ox-round-factor) * ${idx} * var(--ox-base-length))`,
 ]]);
 
-const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -87,7 +87,7 @@ const wSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     ],
 ]);
 
-const minWSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const minWSpanRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -97,7 +97,7 @@ const minWSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     } * var(--ox-grid-line-width))`],
 ]);
 
-const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -107,7 +107,7 @@ const maxWSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     } * var(--ox-grid-line-width))`],
 ]);
 
-const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -120,7 +120,7 @@ const hSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     ],
 ]);
 
-const minHSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const minHSpanRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -130,7 +130,7 @@ const minHSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     } * var(--ox-grid-line-width))`],
 ]);
 
-const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
+const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(33)).map((
     _,
     idx,
 ) => [
@@ -140,7 +140,7 @@ const maxHSpanRules: CssRuleDefinitionSet = Array.from(new Array(17)).map((
     } * var(--ox-grid-line-width))`],
 ]);
 
-const mRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
+const mRules: CssRuleDefinitionSet = Array.from(new Array(33)).flatMap((
     _,
     idx,
 ) => [[
@@ -188,7 +188,7 @@ mRules.push([
     ],
 ]);
 
-const pRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
+const pRules: CssRuleDefinitionSet = Array.from(new Array(33)).flatMap((
     _,
     idx,
 ) => [
@@ -247,7 +247,7 @@ const textRules: CssRuleDefinitionSet = [[
     [`text-align: right`],
 ]];
 
-const lhRules: CssRuleDefinitionSet = Array.from(new Array(17)).flatMap((
+const lhRules: CssRuleDefinitionSet = Array.from(new Array(33)).flatMap((
     _,
     idx,
 ) => [[
@@ -563,6 +563,10 @@ export const definitions: CssRuleDefinitionSet = [
     ["overflow-no", ["overflow: hidden"]],
     ["basis-1", ["flex-basis: 1px;"]],
     [
+        "f-size-xs",
+        ["font-size: var(--ox-f-size-xs)"],
+    ],
+    [
         "f-size-sm",
         ["font-size: var(--ox-f-size-sm)"],
     ],
@@ -581,6 +585,10 @@ export const definitions: CssRuleDefinitionSet = [
     [
         "f-size-2xl",
         ["font-size: var(--ox-f-size-2xl)"],
+    ],
+    [
+        "f-size-3xl",
+        ["font-size: var(--ox-f-size-3xl)"],
     ],
     [
         "f-weight-sm",
