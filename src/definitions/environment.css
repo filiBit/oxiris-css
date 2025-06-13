@@ -25,6 +25,22 @@ body {
   --ox-f-weight-lg: 500;
   --ox-f-weight-xl: 600;
   --ox-f-weight-2xl: 700;
+
+  --ox-light-a-1: oklch(0.33 0.061 224);
+  --ox-light-a-2: oklch(0.75 0.09 224);
+  --ox-light-a-3: oklch(0.9 0.07 224);
+
+  --ox-light-b-1: oklch(0.33 0.07 108);
+  --ox-light-b-2: oklch(0.75 0.09 108);
+  --ox-light-b-3: oklch(0.9 0.07 108);
+
+  --ox-light-c-1: oklch(0.33 0.13 347);
+  --ox-light-c-2: oklch(0.78 0.11 347);
+  --ox-light-c-3: oklch(0.9 0.07 347);
+
+  --ox-light-d-1: oklch(0.3361 0.0856 152.71);
+  --ox-light-d-2: oklch(0.78 0.11 152.71);
+  --ox-light-d-3: oklch(0.9 0.09 152.71);
 }
 
 /* Dark color scheme */
@@ -64,24 +80,24 @@ body {
 
   *.light {
     --ox-neutral-1: oklch(28% 0 0);
-    --ox-neutral-2: oklch(88% 0 0);
-    --ox-neutral-3: oklch(93% 0 0);
+    --ox-neutral-2: oklch(75% 0 0);
+    --ox-neutral-3: oklch(90% 0 0);
 
-    --ox-a-1: oklch(28% 0.09 224);
-    --ox-a-2: oklch(88% 0.035 224);
-    --ox-a-3: oklch(93% 0.02 224);
+    --ox-a-1: var(--ox-light-a-1);
+    --ox-a-2: var(--ox-light-a-2);
+    --ox-a-3: var(--ox-light-a-3);
 
-    --ox-b-1: oklch(28% 0.09 108);
-    --ox-b-2: oklch(88% 0.035 108);
-    --ox-b-3: oklch(93% 0.02 108);
+    --ox-b-1: var(--ox-light-b-1);
+    --ox-b-2: var(--ox-light-b-2);
+    --ox-b-3: var(--ox-light-b-3);
 
-    --ox-c-1: oklch(28% 0.15 347);
-    --ox-c-2: oklch(88% 0.035 347);
-    --ox-c-3: oklch(93% 0.02 347);
+    --ox-c-1: var(--ox-light-c-1);
+    --ox-c-2: var(--ox-light-c-2);
+    --ox-c-3: var(--ox-light-c-3);
 
-    --ox-d-1: oklch(28% 0.09 160);
-    --ox-d-2: oklch(88% 0.035 160);
-    --ox-d-3: oklch(93% 0.02 160);
+    --ox-d-1: var(--ox-light-d-1);
+    --ox-d-2: var(--ox-light-d-2);
+    --ox-d-3: var(--ox-light-d-3);
 
     --ox-background: oklch(100% 0 0);
 
@@ -115,9 +131,9 @@ body {
     --ox-c-2: oklch(88% 0.035 347);
     --ox-c-3: oklch(93% 0.02 347);
 
-    --ox-d-1: oklch(28% 0.09 160);
-    --ox-d-2: oklch(88% 0.035 160);
-    --ox-d-3: oklch(93% 0.02 160);
+    --ox-d-1: var(--ox-light-d-1);
+    --ox-d-2: var(--ox-light-d-2);
+    --ox-d-3: var(--ox-light-d-3);
 
     --ox-background: oklch(100% 0 0);
 
